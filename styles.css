@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footer {
+  position: fixed; 
+  bottom: 0;      
+  width: 100%;     
+  color: rgb(0, 0, 0);  
+  text-align: center;
+  padding: 100px;   
+  font-family: Arial, sans-serif; 
+}
+
+.game {
+  width: 100%;
+  height: 500px;
+  border-bottom: 15px solid rgb(0, 66, 75);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#27a7fc, #ffe798);
+}
+
+#bomb {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: bomb-animation 1.2s infinite linear;
+}
+
+#sonic {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+#nuvens {
+  width: 500px;
+  position: absolute;
+  animation: animacao-nuvens 25s infinite linear;
+}
+
+#gameover {
+  width: 400px;
+  margin-left: 100%;
+  position: absolute; 
+}
+
+#atualizar {
+  width: 50px;
+  margin-left: 100%;
+  position: absolute;
+  margin-top: 350px;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.45s ease
+}
+
+#atualizar:hover{
+  transform: scale(1.1);
+}
+
+#pontuacao {
+  position: absolute; 
+  top: 27px;
+  left: 85%;
+  font-family: 'Silkscreen';
+}
+
+#record {
+  position: absolute; 
+  top: 10px;
+  left: 85%;
+  font-family: 'Silkscreen';
+}
+
+
+@keyframes animacao-nuvens {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes bomb-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+
+@keyframes jump {
+  0% {
+    bottom: 0px;  
+  }
+  40% {
+    bottom: 180px;  
+  }
+  50% {
+    bottom: 180px;  
+  }
+  60% {
+    bottom: 180px;  
+  }
+  100% {
+    bottom: 0px;  
+  }
+}
